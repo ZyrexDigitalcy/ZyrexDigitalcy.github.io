@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Özel Yazılım Geliştirme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',
+            accent: '#3B82F6',
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-gradient-to-b from-blue-100 to-gray-900 0 text-gray-900 dark:text-gray-100">
+
+  <!-- HEADER -->
+      <header class="fixed w-full z-50 shadow-md bg-white dark:bg-slate-800 dark:text-white transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="zyrex.jpg" alt="KKTC Yazılım logosu - Modern ve minimal tasarım" class="h-12" />
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <nav class="flex space-x-8">
+                        <a href="ZYREXDigital.html" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</a>
+                        <a href="ZYREXDigital.html" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">Hizmetler</a>
+                        <a href="ZYREXDigital.html" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">Projeler</a>
+                        <a href="OsmanAyhanTrahonlu.html" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">Hakkımızda</a>
+                        <a href="ZYREXDigital.html" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">İletişim</a>
+                    </nav>
+                    
+                    
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-800 dark:text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 px-6 pb-4">
+            <div class="flex flex-col space-y-3">
+                <a href="ZYREXDigital.html" class="nav-link py-2 text-gray-800 dark:text-white">Ana Sayfa</a>
+                <a href="ZYREXDigital.html" class="nav-link py-2 text-gray-800 dark:text-white">Hizmetler</a>
+                <a href="ZYREXDigital.html" class="nav-link py-2 text-gray-800 dark:text-white">Projeler</a>
+                <a href="OsmanAyhanTrahonlu.html" class="nav-link py-2 text-gray-800 dark:text-white">Hakkımızda</a>
+                <a href="ZYREXDigital.html" class="nav-link py-2 text-gray-800 dark:text-white">İletişim</a>
+                
+                <div class="pt-4 flex space-x-4 items-center">
+                    <button id="mobile-theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-slate-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    
+                    <div class="flex">
+                        <button class="px-3 py-2 rounded-lg bg-gray-100 dark:bg-slate-700">
+                            🇹🇷 TR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
+
+    <!-- Image -->
+    
+
+    <!-- Project Overview -->
+    <section>
+      
+
+      
+    </section>
+    <p class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-mds">
+       Fİrmanıza özel yazılım ihtiyaçlarınızı analiz ederek,iş süreçlerinizi hızlandıracak ve verimliliğinizi artıracak çözümler üretiyoruz. Web tabanlı uygulamalrdan masaüstü yazılımlara, ERP sistemlerinden entegrasyon çözümlerine kadar geniş bir yelpazede hizmet sunuyoryuz.
+      </p>
+    <div class="overflow-hidden rounded-2xl shadow-lg border border-purple-200 dark:border-gray-700">
+      <img src="ozelyazilim.jpg" alt="E-ticaret paneli ekran görüntüsü" class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500" />
+    </div>
+
+    <!-- Features -->
+    <section>
+      <h2 class="text-3xl font-bold text-accent mb-6">🚀 Hangi Sorunları Çözüyoruz?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md">
+          <h3 class="font-semibold text-lg mb-2 text-primary">🔄 Otomasyon Eksikliği</h3>
+          <p>Tekrarlayan görevleri otomatikleştirerek zaman ve maliyet tasarrufu sağlıyoruz.</p>
+        </div>
+        <div class="p-5 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+          <h3 class="font-semibold text-lg mb-2 text-primary">📊 Veri Yönetimi</h3>
+          <p>Verilerinizi etkili bir şekilde yönetmenizi sağlayan özel veritabanı çözümleri sunuyoruz.</p>
+        </div>
+        <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md">
+          <h3 class="font-semibold text-lg mb-2 text-primary">⚙️ Entegrasyon Zorlukları</h3>
+          <p>Farklı sistemlerin birbiriyle sorunsuz çalışmasını sağlayan özel API çözümleri.</p>
+        </div>
+       
+      </div>
+    </section>
+
+    <!-- Technologies -->
+    <section>
+      <h2 class="text-3xl font-bold text-primary mb-6">🧠 Kullanılan Teknolojiler</h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Laravel</span>
+        <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Node.js</span>
+        <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Python</span>
+        <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">PostgreSQL</span>
+        <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Docker</span>
+      </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="text-right">
+      <a href="ZYREXDigital.html" class="inline-block px-8 py-3 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-all transform hover:scale-105">
+                  <i class="fas fa-arrow-left ml-2"></i>  Ana Sayfaya Dön 
+                </a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="bg-gray-100 dark:bg-gray-900 py-6 mt-10 border-t border-blue-300 dark:border-gray-700">
+    <div class="max-w-6xl mx-auto text-center text-sm text-gray-500 dark:text-gray-400">
+      © 2024 ZYREX Digital – Tüm Hakları Saklıdır.
+    </div>
+  </footer>
+
+</body>
+</html>
