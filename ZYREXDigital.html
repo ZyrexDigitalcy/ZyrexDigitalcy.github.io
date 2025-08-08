@@ -124,25 +124,94 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 px-6 pb-4">
-            <div class="flex flex-col space-y-3">
-                <a href="#home" class="nav-link py-2 text-gray-800 dark:text-white">Ana Sayfa</a>
-                <a href="#services" class="nav-link py-2 text-gray-800 dark:text-white">Hizmetler</a>
-                <a href="#projects" class="nav-link py-2 text-gray-800 dark:text-white">Projeler</a>
-                <a href="OsmanAyhanTrahonlu.html" class="nav-link py-2 text-gray-800 dark:text-white">Hakkımızda</a>
-                <a href="#contact" class="nav-link py-2 text-gray-800 dark:text-white">İletişim</a>
-                
-                <div class="pt-4 flex space-x-4 items-center">
-                    
-                    
-                    <div class="flex">
-                        <button class="px-3 py-2 rounded-lg bg-gray-100 dark:bg-slate-700">
-                            🇹🇷 TR
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <style>
+  /* Hamburger buton görünümü */
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle + label {
+    display: block;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* Hamburger çizgileri */
+  #menu-toggle + label span,
+  #menu-toggle + label span::before,
+  #menu-toggle + label span::after {
+    display: block;
+    background: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+  }
+
+  #menu-toggle + label span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #menu-toggle + label span::before {
+    content: '';
+    top: -8px;
+  }
+
+  #menu-toggle + label span::after {
+    content: '';
+    top: 8px;
+  }
+
+  /* Menü başlangıçta gizli */
+  #mobile-menu {
+    display: none;
+  }
+
+  /* Checkbox işaretlendiğinde menüyü göster */
+  #menu-toggle:checked + label + #mobile-menu {
+    display: block;
+  }
+
+  /* Sadece mobilde göster */
+  @media (min-width: 768px) {
+    #menu-toggle + label {
+      display: none;
+    }
+    #mobile-menu {
+      display: block !important;
+    }
+  }
+</style>
+
+<!-- Checkbox gizli -->
+<input type="checkbox" id="menu-toggle" />
+
+<!-- Hamburger buton -->
+<label for="menu-toggle">
+  <span></span>
+</label>
+
+<!-- Menü içeriği -->
+<div id="mobile-menu" class="bg-white dark:bg-slate-800 px-6 pb-4">
+  <div class="flex flex-col space-y-3">
+    <a href="#home" class="nav-link py-2 text-gray-800 dark:text-white">Ana Sayfa</a>
+    <a href="#services" class="nav-link py-2 text-gray-800 dark:text-white">Hizmetler</a>
+    <a href="#projects" class="nav-link py-2 text-gray-800 dark:text-white">Projeler</a>
+    <a href="OsmanAyhanTrahonlu.html" class="nav-link py-2 text-gray-800 dark:text-white">Hakkımızda</a>
+    <a href="#contact" class="nav-link py-2 text-gray-800 dark:text-white">İletişim</a>
+    <div class="pt-4 flex space-x-4 items-center">
+      <div class="flex">
+        <button class="px-3 py-2 rounded-lg bg-gray-100 dark:bg-slate-700">
+          🇹🇷 TR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </header>
 
     <!-- Hero Section -->
@@ -717,3 +786,4 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
 
   
+
