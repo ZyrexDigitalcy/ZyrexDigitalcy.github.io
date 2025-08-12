@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Tasarım & Geliştirme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0a0f2c",
+            accent: "#10b981" // yeşil ton
+          }
+        }
+      }
+    };
+  </script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body
+  class="bg-gradient-to-b from-green-50 to-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-500"
+>
+  <!-- HEADER -->
+  <header
+    class="fixed w-full z-50 shadow-md bg-white dark:bg-slate-800 p-4 transition-colors duration-500"
+  >
+    <div class="flex justify-between items-center max-w-6xl mx-auto">
+      <img src="zyrex.jpg" alt="Zyrex Digital Logo" class="h-12" />
+      <nav class="hidden md:flex space-x-6 font-medium">
+        <a
+          href="ZYREXDigital.html"
+          class="hover:text-accent dark:hover:text-green-400 transition-colors duration-300"
+          >Ana Sayfa</a
+        >
+        <a
+          href="ZYREXDigital.html"
+          class="hover:text-accent dark:hover:text-green-400 transition-colors duration-300"
+          >Hizmetler</a
+        >
+        <a
+          href="ZYREXDigital.html"
+          class="hover:text-accent dark:hover:text-green-400 transition-colors duration-300"
+          >Projeler</a
+        >
+        <a
+          href="OsmanAyhanTrahonlu.html"
+          class="hover:text-accent dark:hover:text-green-400 transition-colors duration-300"
+          >Hakkımızda</a
+        >
+        <a
+          href="ZYREXDigital.html"
+          class="hover:text-accent dark:hover:text-green-400 transition-colors duration-300"
+          >İletişim</a
+        >
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 pt-28 pb-16 space-y-20">
+    <!-- Başlık ve Açıklama -->
+    <section class="text-center space-y-6">
+      <div
+        class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 dark:bg-green-900 mx-auto"
+      >
+        <i class="fas fa-globe text-green-600 dark:text-green-400 text-4xl"></i>
+      </div>
+      <h1
+        class="text-4xl font-bold text-primary dark:text-green-400"
+      >
+        🌐 Web Tasarım & Geliştirme
+      </h1>
+      <p
+        class="max-w-2xl mx-auto text-lg bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md transition-shadow duration-500 hover:shadow-xl"
+      >
+        Marka kimliğinizi en iyi şekilde yansıtan, modern ve kullanıcı dostu web
+        siteleri tasarlıyor ve geliştiriyoruz. Mobil uyumlu, hızlı yüklenen ve SEO
+        uyumlu projelerle işletmenizin dijital dünyada fark yaratmasını sağlıyoruz.
+      </p>
+    </section>
+
+    <!-- Görsel -->
+    <div
+      class="overflow-hidden rounded-2xl shadow-lg border border-green-200 dark:border-green-700 transition-shadow duration-500 hover:shadow-2xl"
+    >
+      <img
+        src="webtasarim.jpg"
+        alt="Web Sitesi Ekran Görüntüsü"
+        class="w-full h-80 object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
+      />
+    </div>
+
+    <!-- Öne Çıkan Özellikler -->
+    <section>
+      <h2
+        class="text-3xl font-bold text-accent mb-8 text-center"
+      >
+        🌟 Öne Çıkan Özellikler
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.05]"
+        >
+          <h3
+            class="font-semibold text-lg mb-2 text-primary dark:text-green-400"
+          >
+            🎨 Özgün Tasarım
+          </h3>
+          <p>Firmanızın kurumsal kimliğine uygun modern ve özgün tasarımlar.</p>
+        </div>
+        <div
+          class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.05]"
+        >
+          <h3
+            class="font-semibold text-lg mb-2 text-primary dark:text-green-400"
+          >
+            📱 Mobil Uyumluluk
+          </h3>
+          <p>Tüm cihazlarda kusursuz çalışan responsive tasarımlar.</p>
+        </div>
+        <div
+          class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.05]"
+        >
+          <h3 class="font-semibold text-lg mb-2 text-primary dark:text-green-400">🚀 SEO Uyumu</h3>
+          <p>Arama motorlarında daha görünür olmanız için SEO dostu altyapı.</p>
+        </div>
+        <div
+          class="p-6 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-[1.05]"
+        >
+          <h3
+            class="font-semibold text-lg mb-2 text-primary dark:text-green-400"
+          >
+            ⚡ Yüksek Performans
+          </h3>
+          <p>Hızlı yüklenen, optimize edilmiş sayfalarla kullanıcı deneyimini artırın.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kullanılan Teknolojiler -->
+    <section>
+      <h2 class="text-3xl font-bold text-primary mb-8 text-center">🛠️ Kullanılan Teknolojiler</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+        <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition-transform">
+          <i class="fab fa-html5 text-4xl text-green-600"></i>
+          <p class="mt-2 font-medium">HTML5</p>
+        </div>
+        <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition-transform">
+          <i class="fab fa-css3-alt text-4xl text-green-500"></i>
+          <p class="mt-2 font-medium">Tailwind CSS</p>
+        </div>
+        <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition-transform">
+          <i class="fab fa-js text-4xl text-yellow-400"></i>
+          <p class="mt-2 font-medium">JavaScript</p>
+        </div>
+        <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition-transform">
+          <i class="fab fa-react text-4xl text-cyan-400"></i>
+          <p class="mt-2 font-medium">React</p>
+        </div>
+        <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition-transform">
+          <i class="fas fa-database text-4xl text-green-600"></i>
+          <p class="mt-2 font-medium">MySQL</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geri Dön Butonu -->
+    <div class="text-center mt-16">
+      <a
+        href="index.html"
+        class="inline-block px-8 py-3 bg-accent text-black rounded-full font-semibold hover:bg-green-500 transition-all transform hover:scale-105 duration-300"
+      >
+        <i class="fas fa-arrow-left mr-2"></i> Ana Sayfaya Dön
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer
+    class="bg-gray-100 dark:bg-gray-900 py-6 mt-20 border-t border-green-300 dark:border-gray-700 transition-colors duration-500"
+  >
+    <div
+      class="max-w-6xl mx-auto text-center text-sm text-gray-500 dark:text-gray-400"
+    >
+      © 2024 ZYREX Digital – Tüm Hakları Saklıdır.
+    </div>
+  </footer>
+</body>
+</html>

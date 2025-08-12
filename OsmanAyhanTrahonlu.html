@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hakkımda - ZYREX Digital / Osman Ayhan TRAHONLU</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 30px 40px;
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      color: #c5b0ff;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      flex-wrap: wrap;
+    }
+
+    .contact-info div {
+      background: #5a3eae;
+      padding: 15px 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px #5a3eae;
+      transition: background 0.3s ease;
+      cursor: default;
+    }
+
+    .contact-info div:hover {
+      background: #764ba2;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 30px;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a.back-link:hover {
+      background: #fff;
+      color: #764ba2;
+    }
+
+    @media (max-width: 600px) {
+      .contact-info {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+     <img src="profil.jpg" alt="Profil Fotoğrafı" class="profile-photo" />
+    <!-- Alternatif test için: <img src="https://i.pravatar.cc/180" alt="Profil Fotoğrafı" class="profile-photo" /> -->
+    <h1>Osman Ayhan TRAHONLU</h1>
+    <h2>ZYREX Digital</h2>
+    <p>
+      Merhaba! Ben Osman Ayhan Trahonlu, yazılım dünyasında yaratıcı çözümler geliştirmeyi seven bir geliştiriciyim.
+      Web uygulamaları, mobil uygulamalar ve modern teknolojiler üzerine projeler yapıyorum.
+      Yeni şeyler öğrenmek ve öğrendiklerimi sizlerle paylaşmak benim için çok değerli.
+    </p>
+    <div class="contact-info">
+      <div>Email: zyrexdigital.cy@gmail.com</div>
+      <div>Telefon: +90 548 888 0104</div>
+    </div>
+    <a href="index.html" class="back-link">Ana Sayfaya Git</a>
+  </div>
+</body>
+</html>

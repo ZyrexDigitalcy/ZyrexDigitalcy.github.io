@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yapay Zeka Çözümleri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0a0f2c',
+                        accent: '#facc15',  // Sarı tema vurgusu
+                    }
+                }
+            }
+        };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+</head>
+<body class="bg-gradient-to-b from-yellow-50 to-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-300">
+
+    <!-- HEADER -->
+    <header class="fixed w-full z-50 shadow-md bg-white dark:bg-slate-800 p-4">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+            <img src="zyrex.jpg" alt="ZYREX Logo" class="h-12" />
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="ZYREXDigital.html" class="hover:text-accent">Ana Sayfa</a>
+                <a href="ZYREXDigital.html" class="hover:text-accent">Hizmetler</a>
+                <a href="ZYREXDigital.html" class="hover:text-accent">Projeler</a>
+                <a href="OsmanAyhanTrahonlu.html" class="hover:text-accent">Hakkımızda</a>
+                <a href="ZYREXDigital.html" class="hover:text-accent">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-6xl mx-auto px-6 pt-28 pb-16 space-y-20">
+
+        <!-- HERO -->
+        <section class="text-center space-y-4">
+            <h1 class="text-4xl font-bold text-primary dark:text-yellow-400">🧠 Yapay Zeka Çözümleri</h1>
+            <p class="max-w-2xl mx-auto text-lg bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md">
+                İş süreçlerinizi dijitalleştirmenin ötesine geçiyoruz. Geliştirdiğimiz yapay zeka ve makine öğrenmesi çözümleri ile verimliliği artırıyor, insan hatalarını azaltıyor ve karar alma süreçlerinizi destekliyoruz.
+            </p>
+            <div class="overflow-hidden rounded-2xl shadow-lg border border-yellow-200 dark:border-yellow-700">
+                <img src="yapayzeka.jpg" alt="Yapay Zeka Görseli" class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+        </section>
+
+        <!-- APPLICATION AREAS -->
+        <section>
+            <h2 class="text-3xl font-bold text-accent mb-8 text-center">🚀 Uygulama Alanları</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="font-semibold text-lg mb-2 text-primary">📊 Tahminleme Modelleri</h3>
+                    <p>Satış tahminleri, stok optimizasyonu ve finansal modellemeler için güçlü öngörüler</p>
+                </div>
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="font-semibold text-lg mb-2 text-primary">🤖 Chatbot & NLP</h3>
+                    <p>Doğal dil işleme (NLP) destekli chatbot sistemleri ile müşteri desteğinde dönüşüm</p>
+                </div>
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="font-semibold text-lg mb-2 text-primary">📈 Veri Analizi & Raporlama</h3>
+                    <p>Veri odaklı kararlar için gelişmiş analiz araçları ve otomatik raporlama çözümleri</p>
+                </div>
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="font-semibold text-lg mb-2 text-primary">🔐 Anomali Tespiti</h3>
+                    <p>Siber güvenlik, finans veya üretimde beklenmeyen durumları yapay zeka ile tespit edin</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGIES -->
+        <section>
+            <h2 class="text-3xl font-bold text-accent mb-8 text-center">🛠️ Kullanılan Teknolojiler</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition">
+                    <i class="fab fa-python text-4xl text-yellow-600 dark:text-yellow-400"></i>
+                    <p class="mt-2 font-medium">Python</p>
+                </div>
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition">
+                    <i class="fas fa-brain text-4xl text-yellow-500 dark:text-yellow-300"></i>
+                    <p class="mt-2 font-medium">TensorFlow</p>
+                </div>
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition">
+                    <i class="fas fa-table text-4xl text-yellow-600 dark:text-yellow-400"></i>
+                    <p class="mt-2 font-medium">Pandas</p>
+                </div>
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition">
+                    <i class="fas fa-flask text-4xl text-yellow-500 dark:text-yellow-300"></i>
+                    <p class="mt-2 font-medium">scikit-learn</p>
+                </div>
+                <div class="p-5 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:scale-105 transition">
+                    <i class="fas fa-rocket text-4xl text-yellow-600 dark:text-yellow-400"></i>
+                    <p class="mt-2 font-medium">FastAPI</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BACK BUTTON -->
+        <div class="text-center">
+            <a href="index.html" class="inline-block px-8 py-3 bg-accent text-black rounded-full font-semibold hover:bg-yellow-400 transition-all transform hover:scale-105">
+                <i class="fas fa-arrow-left mr-2"></i> Ana Sayfaya Dön
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>

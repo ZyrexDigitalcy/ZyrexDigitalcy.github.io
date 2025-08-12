@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("MERRLv0gdp7zOwmB4");
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYREX Digital | Yenilikçi Teknoloji Çözümleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #000000;
+            --secondary: #1100ff;
+            --dark: #000000;
+            --light: #386ca0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+        
+        .dark-mode {
+            background-color: var(--dark);
+            color: var(--light);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .page-transition {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-item {
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .language-selector {
+            transition: all 0.3s ease;
+        }
+        
+        #back-to-top {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        #back-to-top.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="fixed w-full z-50 shadow-md bg-white dark:bg-slate-800 dark:text-white transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="zyrex (1).svg" alt="KKTC Yazılım logosu - Modern ve minimal tasarım" class="h-12" />
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <nav class="flex space-x-8">
+                        <a href="#home" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</a>
+                        <a href="#services" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">Hizmetler</a>
+                        <a href="#projects" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">Projeler</a>
+                        <a href="OsmanAyhanTrahonlu.html" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">Hakkımızda</a>
+                        <a href="#contact" class="nav-link text-lg font-medium text-gray-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">İletişim</a>
+                    </nav>
+                    
+                    
+                </div>
+                
+                <style>
+                      /* Hamburger buton görünümü */
+
+  /* Hamburger buton görünümü */
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle + label {
+    display: block;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* Hamburger çizgileri */
+  #menu-toggle + label span,
+  #menu-toggle + label span::before,
+  #menu-toggle + label span::after {
+    display: block;
+    background: #333;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    position: absolute;
+  }
+
+  #menu-toggle + label span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #menu-toggle + label span::before {
+    content: '';
+    top: -8px;
+  }
+
+  #menu-toggle + label span::after {
+    content: '';
+    top: 8px;
+  }
+
+  /* Menü başlangıçta gizli */
+  #mobile-menu {
+    display: none;
+  }
+
+  /* Checkbox işaretlendiğinde menüyü göster */
+  #menu-toggle:checked + label + #mobile-menu {
+    display: block;
+  }
+
+  /* Sadece mobilde göster */
+  @media (min-width: 768px) {
+    #menu-toggle + label {
+      display: none;
+    }
+    #mobile-menu {
+      display: none !important;
+    }
+  }
+</style>
+
+<!-- Checkbox gizli -->
+<input type="checkbox" id="menu-toggle" />
+
+<!-- Hamburger buton -->
+<label for="menu-toggle">
+  <span></span>
+</label>
+
+<!-- Menü içeriği -->
+<div id="mobile-menu" class="bg-white dark:bg-slate-800 px-6 pb-4">
+  <div class="flex flex-col space-y-3">
+    <a href="#home" class="nav-link py-2 text-gray-800 dark:text-white">Ana Sayfa</a>
+    <a href="#services" class="nav-link py-2 text-gray-800 dark:text-white">Hizmetler</a>
+    <a href="#projects" class="nav-link py-2 text-gray-800 dark:text-white">Projeler</a>
+    <a href="OsmanAyhanTrahonlu.html" class="nav-link py-2 text-gray-800 dark:text-white">Hakkımızda</a>
+    <a href="#contact" class="nav-link py-2 text-gray-800 dark:text-white">İletişim</a>
+    <div class="pt-4 flex space-x-4 items-center">
+      <div class="flex">
+        <button class="px-3 py-2 rounded-lg bg-gray-100 dark:bg-slate-700">
+          🇹🇷 TR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                </style>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+       
+
+
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center pt-20 text-white page-transition">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6">Yenilikçi <span class="text-yellow-300">Teknoloji</span> Çözümleri</h1>
+                    <p class="text-xl mb-8 leading-relaxed">ZYREX Digital olarak, işletmenizin dijital dönüşüm yolculuğunda yanınızdayız. Özelleştirilmiş yazılım çözümleriyle rekabet avantajınızı artırın.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all transform hover:scale-105">Ücretsiz Danışmanlık</a>
+                        <a href="#services" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all transform hover:scale-105">Hizmetlerimiz</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="bg.jpeg" alt="Modern ofis ortamında çalışan yazılım ekibi - Yazılım geliştirme sürecini gösteren ekranlar ve takım çalışması" class="rounded-xl shadow-2xl" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-slate-900 page-transition">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800 dark:text-white">Uzmanlık Alanlarımız</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mx-auto max-w-3xl">Sektörün ihtiyaçlarına yönelik özelleştirilmiş yazılım çözümleri sunuyoruz. İş süreçlerinizi optimize eden teknolojiler geliştiriyoruz.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 mb-6 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-blue-600 dark:text-blue-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Özel Yazılım Geliştirme</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">İşletmenizin benzersiz ihtiyaçlarına göre tamamen özelleştirilmiş yazılım çözümleri.</p>
+                    <a href="detay1.html" class="text-blue-600 dark:text-blue-400 font-medium flex items-center">
+                        Detaylar <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 mb-6 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-purple-600 dark:text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Mobil Uygulama Geliştirme</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">iOS ve Android için yüksek performanslı, kullanıcı dostu mobil uygulamalar.</p>
+                    <a href="detay2.html" class="text-purple-600 dark:text-purple-400 font-medium flex items-center">
+                        Detaylar <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 mb-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                        <i class="fas fa-globe text-green-600 dark:text-green-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Web Tasarım & Geliştirme</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Marka kimliğinizi yansıtan, dönüşüm odaklı profesyonel web siteleri.</p>
+                    <a href="detay3.html" class="text-green-600 dark:text-green-400 font-medium flex items-center">
+                        Detaylar <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 mb-6 rounded-full bg-yellow-100 dark:bg-yellow-900 flex items-center justify-center">
+                        <i class="fas fa-brain text-yellow-600 dark:text-yellow-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Yapay Zeka Çözümleri</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">İş süreçlerinizi optimize edecek makine öğrenmesi ve yapay zeka uygulamaları.</p>
+                    <a href="detay4.html" class="text-yellow-600 dark:text-yellow-400 font-medium flex items-center">
+                        Detaylar <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 mb-6 rounded-full bg-red-100 dark:bg-red-900 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-red-600 dark:text-red-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Siber Güvenlik</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Kurumsal verilerinizi korumak için kapsamlı siber güvenlik hizmetleri.</p>
+                    <a href="detay5.html" class="text-red-600 dark:text-red-400 font-medium flex items-center">
+                        Detaylar <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white dark:bg-slate-800 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 mb-6 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center">
+                        <i class="fas fa-cloud text-indigo-600 dark:text-indigo-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Bulut Çözümleri</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Yüksek erişilebilirlik ve güvenlik sunan bulut tabanlı çözümler.</p>
+                    <a href="detay6.html" class="text-indigo-600 dark:text-indigo-400 font-medium flex items-center">
+                        Detaylar <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-slate-800 page-transition">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800 dark:text-white">Başarı Hikayeleri</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mx-auto max-w-3xl">Farklı sektörlerde gerçekleştirdiğimiz başarılı projelerimiz ve referanslarımız.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+            <div class="max-w-md mx-auto bg-whtie dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-[1.02]">
+                <div class="h-48 overflow-hidden group">
+                    <img src="galaksi.jpeg"
+                        alt="Galaksi Tema Görüntüsü - Kullanıcı Dostu Arayüz ve ürün yönetimi"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div> 
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb*3">
+                        <span class="text-xs px-3 py-1 bg-blue-100 dark:blue-900 text-blue-800 dark:tex-blue-200 rounded-full">
+                            Etkileşimli Galaksi Arka Planı
+                        </span>
+                        <span class="text-sm text-gray-400 dark:text-gray-400" >2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" >Galaxy  Temalı Arka Plan</h3>
+                    <p calss="text-gray-700 dark:text-gray-300 text-sm mb-5" >
+                     Fareyi hareket ettirdikçe yıldızlar/parçacıklar kayan bir efektle hareket eder
+                    </p>
+                    
+                </div>
+            </div>
+            
+                
+                <!-- Project 2 -->
+                <div class="max-w-md mx-auto bg-whtie dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-[1.02]">
+                <div class="h-48 overflow-hidden group">
+                    <img src="kartvizitgorsel.jpg"
+                        alt="E-Ticaret paneli ekran görüntüsü - Kullanıcı Dostu Arayüz ve ürün yönetimi"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div> 
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb*3">
+                        <span class="text-xs px-3 py-1 bg-blue-100 dark:blue-900 text-blue-800 dark:tex-blue-200 rounded-full">
+                            Kartvizit Tasarımı
+                        </span>
+                        <span class="text-sm text-gray-400 dark:text-gray-400" >2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" >Kişiye Özel Kartvizit Tasarımı</h3>
+                    <p calss="text-gray-700 dark:text-gray-300 text-sm mb-5" >
+                        Sadece tek bir sayfada özgeçmiş, sosyal medya linkleri, profil fotoğrafı ve bir “karanlık/aydınlık mod” butonuyla minimal ama modern bir kartvizit.                    </p>
+                    
+                </div>
+            </div>
+            
+                
+                <!-- Project 3 -->
+                <div class="max-w-md mx-auto bg-whtie dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden transform transition duration-300 hover:scale-[1.02]">
+                <div class="h-48 overflow-hidden group">
+                    <img src="kaydirmaliekran.jpg"
+                        alt="Prallax Kaydırmalı Ekran Tanıtım Sayfası - Kullanıcı Dostu Arayüz ve ürün yönetimi"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div> 
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb*3">
+                        <span class="text-xs px-3 py-1 bg-blue-100 dark:blue-900 text-blue-800 dark:tex-blue-200 rounded-full">
+                            Parallax Teması
+                        </span>
+                        <span class="text-sm text-gray-400 dark:text-gray-400" >2024</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" >Parallax Teması Kullanılarak Hazırlanan Tanıtımlar</h3>
+                    <p calss="text-gray-700 dark:text-gray-300 text-sm mb-5" >
+                            Kullanıcı sayfayı aşağı kaydırdıkça arkadaki görseller farklı hızda hareket eder (parallax efekti), ön plandaki metin ve butonlarla birlikte akıcı bir deneyim sunar.                    </p>
+                    
+                </div>
+            </div>
+            </div>
+            </div>
+            
+           
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-slate-900 page-transition">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800 dark:text-white">ZYREX Digital</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">2024 yılından bu yana teknoloji alanında yenilikçi çözümler sunan KKTC Yazılım, müşterilerine özel yazılım geliştirme, dijital dönüşüm ve danışmanlık hizmetleri sağlamaktadır.</p>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Deneyimli uzman ekibimiz ve sektör bilgimizle, müşterilerimizin iş hedeflerine ulaşmalarını destekleyen çözümler üretiyoruz.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400 text-3xl">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 dark:text-white">30+</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Mutlu Müşteri</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="mr-4 text-green-600 dark:text-green-400 text-3xl">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 dark:text-white">50+</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Tamamlanan Proje</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="mr-4 text-yellow-600 dark:text-yellow-400 text-3xl">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 dark:text-white">8</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Teknoloji Ortağı</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="mr-4 text-red-600 dark:text-red-400 text-3xl">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800 dark:text-white">5</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Sektör Ödülü</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Neden Bizi Tercih Etmelisiniz?</h3>
+                        
+                        <div class="flex mb-6">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Sektör Deneyimi</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Farklı sektörlerdeki deneyimimizle sizlere en uygun çözümleri sunuyoruz.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex mb-6">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Teknoloji Odaklı Yaklaşım</h4>
+                                <p class="text-gray-600 dark:text-gray-300">En güncel teknolojileri kullanarak geleceğe yönelik çözümler geliştiriyoruz.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex mb-6">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Müşteri Memnuniyeti</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Proje tesliminden sonra da destek sağlayarak müşteri memnuniyetini önceliğimiz yapıyoruz.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 text-gray-800 dark:text-white">Uygun Maliyet</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Yüksek kalitede hizmetleri rekabetçi fiyatlarla sunuyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white dark:bg-slate-800 page-transition">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800 dark:text-white">Müşterilerimiz Ne Diyor?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 mx-auto max-w-3xl">Bizimle çalışan müşterilerimizin KKTC Yazılım deneyimleri hakkındaki görüşleri.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-4">
+                            <img src="erkekavatar1.jpg" alt="Ahmet Yılmaz portresi - 40'li yaşlarında, takım elbiseli, güler yüzlü erkek" class="w-16 h-16 rounded-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 dark:text-white">Ahmet Yılmaz</h4>
+                            <p class="text-gray-600 dark:text-gray-400">CEO, X Şirketi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">"ZYREX Digital ile çalıştığımız için çok mutluyuz. Profesyonel yaklaşımları ve işlerine olan hakimiyetleri gerçekten etkileyici."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-4">
+                            <img src="kizavatar1.jpg" alt="Ayşe Kaya portresi - Profesyonel iş kadını, modern saç stili, zarif" class="w-16 h-16 rounded-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 dark:text-white">Ayşe Kaya</h4>
+                            <p class="text-gray-600 dark:text-gray-400">COO, Y Şirketi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">"Mobil uygulamamızın geliştirilmesi sürecinde harika bir iş çıkardılar. Sürekli iletişim halinde kalarak ihtiyaçlarımızı tam olarak karşıladılar."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="mr-4">
+                            <img src="erkekavatar2.jpg" alt="Mehmet Demir portresi - Orta yaşlı, güler yüzlü, güven veren ifadeli erkek" class="w-16 h-16 rounded-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800 dark:text-white">Mehmet Demir</h4>
+                            <p class="text-gray-600 dark:text-gray-400">CTO, Z Şirketi</p>
+                        </div>
+                    </div>
+                                        <p class="text-gray-600 dark:text-gray-300 mb-4">"Geliştirdikleri özel ERP çözümü iş süreçlerimizi %40 oranında hızlandırdı. Kendilerine teşekkür ediyoruz."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-slate-900 page-transition">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-4xl font-bold mb-6 text-gray-800 dark:text-white">Bize Ulaşın</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Projeniz hakkında bilgi almak veya işbirliği fırsatlarını değerlendirmek için bizimle iletişime geçebilirsiniz.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400 text-xl mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Ofis Adresi</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Lefkoşa, KKTC</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400 text-xl mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Telefon</h4>
+                                <p class="text-gray-600 dark:text-gray-400">+90 548 888 0104</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400 text-xl mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-400">zyrexdigital.cy@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 text-blue-600 dark:text-blue-400 text-xl mt-1">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Çalışma Saatleri</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Pazartesi - Cuma: 09:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Sosyal Medyada Biz</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://wa.me/905488880104?text=Web%20sitesi%20tasarımlarınızı%20görmek%20istiyorum." class="w-10 h-10 rounded-full bg-green-400 text-white flex items-center justify-center hover:bg-green-500 transition-all">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center hover:bg-red-700 transition-all">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.instagram.com/zyrexdigitalcy?igsh=c2FpZ2NnNW1iNmF4" class="w-10 h-10 rounded-full bg-purple-600 text-white flex items-center justify-center hover:bg-purple-700 transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-blue-800 text-white flex items-center justify-center hover:bg-blue-900 transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">İletişim Formu</h3>
+                        
+                        <form id="contact-form">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Adınız Soyadınız</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white" placeholder="Adınızı giriniz" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Email Adresiniz</label>
+                                <input type="email" id="email" name="email"  class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white" placeholder="Email adresinizi giriniz" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" name="phone" class="block text-gray-700 dark:text-gray-300 mb-2">Telefon Numaranız</label>
+                                <input type="tel" id="user_phone" name="phone"class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white" placeholder="Telefon numaranızı giriniz">
+                                <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2">Konu</label>
+                                <select id="subject" name="title" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white">
+                                    <option value="">Seçiniz</option>
+                                    <option value="teklif">Proje Teklifi</option>
+                                    <option value="danismanlik">Danışmanlık</option>
+                                    <option value="destek">Teknik Destek</option>
+                                    <option value="genel">Genel Soru</option>
+                                </select>
+                            </div> 
+                                <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Mesajınız</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white" placeholder="Mesajınızı buraya yazınız" required></textarea>
+                            </div>
+                            
+                            
+                            
+
+                            
+                            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-[1.01]">
+                                Mesajı Gönder <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-slate-950 text-white py-12 page-transition">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">ZYREX Digital</h3>
+                    <p class="text-gray-400 mb-4">Teknolojiye dair her şey için profesyonel çözümler sunuyoruz.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/zyrexdigitalcy?igsh=c2FpZ2NnNW1iNmF4" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Hizmetler</h3>
+                    <ul class="space-y-2">
+                        <li><a href="detay1.html" class="text-gray-400 hover:text-white transition-colors">Özel Yazılım Geliştirme</a></li>
+                        <li><a href="detay2.html" class="text-gray-400 hover:text-white transition-colors">Mobil Uygulama Geliştirme</a></li>
+                        <li><a href="detay3.html" class="text-gray-400 hover:text-white transition-colors">Web Tasarım & Geliştirme</a></li>
+                        <li><a href="detay4.html" class="text-gray-400 hover:text-white transition-colors">Yapay Zeka Çözümleri</a></li>
+                        <li><a href="detay5.html" class="text-gray-400 hover:text-white transition-colors">Siber Güvenlik</a></li>
+                        <li><a href="detay6.html" class="text-gray-400 hover:text-white transition-colors">Bulut Çözümleri</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Hızlı Linkler</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ZYREXDigital.html" class="text-gray-400 hover:text-white transition-colors">Ana Sayfa</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Hizmetler</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projeler</a></li>
+                        <li><a href="OsmanAyhanTrahonlu.html" class="text-gray-400 hover:text-white transition-colors">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Bülten</h3>
+                    <p class="text-gray-400 mb-4">Yeniliklerden haberdar olmak için bültenimize abone olun.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email adresiniz" class="px-4 py-2 rounded-l-lg bg-gray-700 text-white focus:outline-none w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2024 ZYREX Digital. Tüm hakları saklıdır.</p>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("MERRLv0gsP7zOwmB4"); // Public Key
+  })();
+</script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Sayfanın yenilenmesini engeller
+
+    emailjs.sendForm('service_7h41psn', 'template_920gdom', this)
+        .then(function() {
+            alert('Mesajınız başarıyla gönderildi!');
+            document.getElementById('contact-form').reset(); // Formu sıfırlar
+        }, function(error) {
+            alert('Mesaj gönderilirken bir hata oluştu: ' + JSON.stringify(error));
+        });
+});
+</script>
+
+</body>
+</html>
+
+
+  
